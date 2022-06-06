@@ -9,4 +9,14 @@
 # 123
 # 1234
 
-# TODO: your code here
+n = int(input("Введите натуральное число: "))
+
+i = 1  # Счетчик по вертикали
+while i <= n:
+    j = 1  # Счетчик по горизонтали
+    while j <= i:
+        print(j, end='')
+        j += 1
+    print()
+    j = 1
+    i += 1
