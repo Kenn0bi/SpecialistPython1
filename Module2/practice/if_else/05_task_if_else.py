@@ -8,33 +8,33 @@
 month_number = int(input("Введите номер месяца от 1 до 12: "))
 
 if month_number == 1:
-    print("январь")
+    print("зима")
 elif month_number == 2:
-    print("февраль")
+    print("зима")
 elif month_number == 3:
-    print("март")
+    print("весна")
 elif month_number == 4:
-    print("апрель")
+    print("весна")
 elif month_number == 5:
-    print("май")
+    print("весна")
 elif month_number == 6:
-    print("июнь")
+    print("лето")
 elif month_number == 7:
-    print("июль")
+    print("лето")
 elif month_number == 8:
-    print("август")
+    print("лето")
 elif month_number == 9:
-    print("сентябрь")
+    print("осень")
 elif month_number == 10:
-    print("октябрь")
+    print("осень")
 elif month_number == 11:
-    print("ноябрь")
+    print("осень")
 else:
-    print("декабрь")
+    print("зима")
 
 # Вариант 2
 
-month = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"]
+season = ["зима", "зима", "весна", "весна", "весна", "лето", "лето", "лето", "осень", "осень", "осень", "зима"]
 month_number = int(input("Введите номер месяца от 1 до 12: "))
 
-print(month[month_number-1])
+print(season[month_number - 1])
