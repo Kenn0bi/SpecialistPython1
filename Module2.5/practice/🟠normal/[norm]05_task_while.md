@@ -16,7 +16,22 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите целое положительное число: "))
+i = 2
+is_simple = False  # Признак простого числа
+s = ""
+
+while i < n and not is_simple:
+    if i > (n // 2 + 1) and s == "":
+        is_simple = True  # Число простое, если не найден делитель от 2 до n //2 +1
+    elif n % i == 0:
+        s += str(i) + " "
+    i += 1
+
+if is_simple:
+    print("Число простое")
+else:
+    print("Делители числа:", s )
 ```
 
 ---
