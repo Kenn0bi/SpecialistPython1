@@ -16,7 +16,15 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+s = "0"
+sum_positive = 0
+i = 1
+while s != "стоп":
+    if int(s) > 0:
+        sum_positive += int(s)
+    s = input("Введите целое число (для выхода из цикла наберите \"стоп\") ")
+    i += 1
+print("Сумма положительных чисел равна ", sum_positive)
 ```
 
 ---
