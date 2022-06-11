@@ -20,7 +20,15 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите количество уровней пирамиды: "))
+total_sum = 0
+
+i = 1
+while i <= n:
+    total_sum += i * i
+    i += 1
+print("Сумма чисел, написанных на кирпичах равна ", total_sum)
+
 ```
 
 ---
