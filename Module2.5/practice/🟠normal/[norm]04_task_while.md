@@ -22,7 +22,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите число от 1 до 9: "))
+
+s="123456789"
+i = 1
+
+while i <= n:
+    print(s[0:i])
+    i += 1
 ```
 
 ---
