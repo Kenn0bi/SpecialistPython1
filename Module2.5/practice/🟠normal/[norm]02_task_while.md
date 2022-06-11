@@ -16,7 +16,15 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+s = "0"
+count_positive = 0
+i = 1
+while s != "стоп":
+    if int(s) > 0:
+        count_positive += 1
+    s = input("Введите целое число (для выхода из цикла наберите \"стоп\") ")
+    i += 1
+print("Количество положительных чисел равно ", count_positive)
 ```
 
 ---
