@@ -16,7 +16,24 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите целое положительное число: "))
+divider = 1
+is_simple = False  # Признак простого числа
+sum_dividers = 0
+
+while divider < n:
+    if divider > (n // 2 + 1) and sum_dividers == 0:
+        is_simple = True  # Число простое, если не найден делитель от 1 до n //2 +1
+        break
+    if n % divider == 0:
+        sum_dividers += divider
+    divider += 1
+
+if is_simple:
+    print("Число простое")
+else:
+    print("Да" if n == sum_dividers else "Нет")
+
 ```
 
 ---
