@@ -32,7 +32,12 @@ n = 5
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите число от 1 до 20: "))
+
+i = 1
+while i <= n:
+    print("*" * i)
+    i += 1
 ```
 
 ---
