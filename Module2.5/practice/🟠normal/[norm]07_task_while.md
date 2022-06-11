@@ -16,7 +16,31 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+a = int(input("Введите первое целое положительное число: "))
+b = int(input("Введите второе целое положительное число, больше первого: "))
+
+s = ""
+n = a
+
+while n <= b:
+    divider = 1
+    is_simple = False  # Признак простого числа
+    sum_dividers = 0
+    while divider < n:
+        if divider > (n // 2 + 1) and sum_dividers == 0:
+            is_simple = True  # Число простое, если не найден делитель от 1 до n //2 +1
+            break
+        if n % divider == 0:
+            sum_dividers += divider
+        divider += 1
+    if not is_simple and n == sum_dividers:
+        s += str(n) + " "
+    n += 1
+
+if s != "":
+    print("Совершенные числа:", s)
+else:
+    print("Совершенных чисел нет.")
 ```
 
 ---
