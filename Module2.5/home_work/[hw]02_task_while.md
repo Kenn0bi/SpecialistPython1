@@ -21,5 +21,19 @@
 a = int(input("a: "))
 b = int(input("b: "))
 
-# TODO: you code here...
+numbers_divided_5 = []
+a_less_b = True
+if a > b:
+    a, b = b, a
+    a_less_b = False
+
+while a <= b:
+    if a % 5 == 0:
+        numbers_divided_5.append(a)
+    a += 1
+
+if a_less_b:
+    print(numbers_divided_5)
+else:
+    print(numbers_divided_5[::-1])
 ```
