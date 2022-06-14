@@ -16,7 +16,21 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("Введите целое положительное число: "))
+
+digit_F_previous = 0
+digit_F = 0
+i = 0
+
+while i < n:
+    if i == 1:
+        digit_F = 1
+    else:
+        digit_F += digit_F_previous
+        digit_F_previous = digit_F - digit_F_previous
+    i += 1
+
+print("Число Фибоначчи:", digit_F)
 ```
 
 ### Данные для самопроверки
