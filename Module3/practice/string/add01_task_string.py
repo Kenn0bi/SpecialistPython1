@@ -7,4 +7,14 @@ text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat
 # Примечание: для генериации текста можете воспользоваться сайтом: https://ru.lipsum.com/
 # Примечание: обратите внимание на перенос длинной строки на новую строку
 
-# TODO: your code here
+for char in [",", ".", "!", "?", "-"]:
+    text = text.replace(char, "")
+
+split_text = text.split()
+count = 0
+
+for word in split_text:
+    if len(word) > 7:
+        count += 1
+
+print("Количество слов длиной более 7 букв:", count)
