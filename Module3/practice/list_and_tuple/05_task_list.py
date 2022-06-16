@@ -6,6 +6,13 @@
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 
 # TODO: your code here
+max_length_fruit_name = max(map(len, fruits))
+max_length_index = len(str(len(fruits)))
+
+i = 1
+for fruit in fruits:
+    print(str(i).rjust(max_length_index) + ".", fruit.rjust(max_length_fruit_name))
+    i += 1
 
 # Пример вывода:
 # 1. яблоко
