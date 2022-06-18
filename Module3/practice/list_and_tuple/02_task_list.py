@@ -4,3 +4,8 @@
 fruits = ["яблоко", "банан", "киви", "ананас", "груша"]
 
 # TODO: your code here
+i = 1
+for fruit in fruits:
+    s = f"{i}. {fruit}"
+    print(s)
+    i += 1
