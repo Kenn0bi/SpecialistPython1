@@ -2,3 +2,15 @@
 # где hh - часы, mm- минуты, ss - секунды.
 # Пример:
 # 29143 секунд → 08:05:43
+
+def seconds_to_hhmmss(sec):
+    h = sec // 3600
+    m = (sec - h * 3600) // 60
+    s = sec % 60
+    return f"{h:0>2}:{m:0>2}:{s:0>2}"
+
+
+sec = 29143
+
+print(f"{sec} секунд → {seconds_to_hhmmss(sec)}")
+
