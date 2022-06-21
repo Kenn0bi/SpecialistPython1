@@ -1,6 +1,5 @@
-def my_abs(...):
-    ...
-    return ...
+def my_abs(n):
+    return n if n >= 0 else -n
 
 
 print(my_abs(-5))
