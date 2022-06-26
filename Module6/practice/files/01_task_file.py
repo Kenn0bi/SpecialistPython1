@@ -9,11 +9,22 @@
 path = "dir/limericks.txt"  # вместо dir подставь название папки с файлом.
 # Или удалите dir, если limericks.txt в той же папке, что и текущий файл
 
-# Открываем файл на чтение
-f = open(path, "r")
-# В переменную line считываем строку за стройкой из файла(f)
-for line in f:
-    ...
+with open(path, "r", encoding="utf8") as f:
+    # В переменную line считываем строку за стройкой из файла(f)
+    count_symbols = 0
+    count_poems = 0
 
+    for line in f:
+        line_without_spaces = line.strip().replace(" ", "").replace("\t","")
+        count_symbols += len(line_without_spaces)
+        if len(line_without_spaces) == 0:
+            count_poems += 1
+        print(line.rstrip())
+
+    if count_symbols > 0:
+        count_poems += 1
+
+    print(f"\nНепробельных символов: {count_symbols}, стихов: {count_poems}")
+    
 # Подсказка: пустые строки выглядят так "\n". Помните? Строка считывается вместе с символом переноса!
 # Применение метода "\n".rstrip() --> "" вернет вам пустую строку, строку из НУЛЯ символов.
