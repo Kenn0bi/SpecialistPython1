@@ -22,7 +22,16 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+path = "data/fruits.txt"
+alphabet = list(map(chr, range(ord('А'), ord('Я')+1)))
+
+with open(path, "r", encoding="utf-8") as f_in:
+    for line in f_in:
+        fruit = line.strip()
+        if len(fruit) != 0 and fruit.upper()[0] in alphabet:
+            path_out = path.replace(".", fruit.upper()[0] + ".")
+            with open(path_out, "a", encoding="utf-8") as f_out:
+                f_out.write(fruit + "\n")
 ```
 
 ---
