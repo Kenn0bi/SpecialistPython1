@@ -22,7 +22,17 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+path_in = "data/salaries.txt"
+path_out = "data/highly_paid.txt"
+
+with open(path_out, "w", encoding="utf8") as f_out:
+    with open(path_in, "r", encoding="utf8") as f_in:
+        for line in f_in:
+            emploee = line.split()
+            if emploee[3].isnumeric() and int(emploee[3]) > 60000:
+                s = f"{emploee[0]} {emploee[1][0]}.{emploee[2][0]}.\n"
+                f_out.write(s)
+
 ```
 
 ---
