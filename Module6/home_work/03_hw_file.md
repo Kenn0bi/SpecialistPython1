@@ -35,7 +35,13 @@ n = 6
 
 ```python
 n = int(input("n: "))
-# TODO: you code here...
+
+if n > 0:
+    len_pyramid_base = (n - 1) * 2 + 1  # Длина основания пирамиды
+    with open("data/pyramid.txt", "w") as f:
+        for i in range(n):
+            s = "*" + "*" * i * 2
+            f.write(f"{s:^{len_pyramid_base}}\n")
 ```
 
 ---
